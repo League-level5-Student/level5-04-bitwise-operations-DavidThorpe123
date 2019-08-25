@@ -13,11 +13,21 @@ public class BinaryPrinter {
 		
 	}
 	
-	public void printIntBinary(int i) {
-		
+	public static void printIntBinary(int i) {
+	String binarynumber = " ";
+	while(i >=1) {
+		int q = i / 2;
+		int r = i % 2;
+		binarynumber += r;
+		i = q;
+	}
+	System.out.println(binarynumber);
 	}
 	
 	public void printLongBinary(long l) {
 		
+	}
+	public static void main(String[] args) {
+		printIntBinary(23);
 	}
 }
