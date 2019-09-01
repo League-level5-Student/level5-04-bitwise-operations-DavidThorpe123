@@ -5,8 +5,15 @@ public class BinaryPrinter {
 	//Don't be afraid to use the methods that are already complete to finish the others.
 	//Create a main method to test your methods.
 	
-	public void printByteBinary(byte b) {
-		
+	public static void printByteBinary(byte b) {
+		String binarynumber = " ";
+		while(b >= 1) {
+			byte q = (byte) (b / 2);
+			byte r = (byte) (b % 2);
+			binarynumber += r;
+			b = q;
+		}
+		System.out.println(binarynumber);
 	}
 	
 	public void printShortBinary(short s) {
@@ -15,7 +22,7 @@ public class BinaryPrinter {
 	
 	public static void printIntBinary(int i) {
 	String binarynumber = " ";
-	while(i >=1) {
+	while(i >= 1) {
 		int q = i / 2;
 		int r = i % 2;
 		binarynumber += r;
@@ -24,10 +31,21 @@ public class BinaryPrinter {
 	System.out.println(binarynumber);
 	}
 	
-	public void printLongBinary(long l) {
-		
-	}
+	public static void printLongBinary(long l) {
+		String binarynumber = " ";
+		while(l >= 1) {
+			int q = (int) (l / 2);
+			int r = (int) (l % 2);
+			binarynumber += r;
+			l = q;
+		}
+		System.out.println(binarynumber);
+		}
+	
 	public static void main(String[] args) {
 		printIntBinary(23);
+		printByteBinary((byte) 8);
+		printLongBinary(2300);
+		System.out.println("kjslfd");
 	}
 }
